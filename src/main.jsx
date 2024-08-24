@@ -5,7 +5,7 @@ import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} fr
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css';
-import Layout from './layout.jsx';
+import Layout from './Layout.jsx';
 import DelCard from './components/DelCard.jsx'
 
 import OnlineDel from './components/OnlineDel.jsx'
