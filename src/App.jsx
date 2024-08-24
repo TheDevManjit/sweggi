@@ -1,6 +1,6 @@
 
 import Header from './components/Header'
-import Category from './components/category'
+import Category from './components/Category'
 import Restro from './components/Restro'
 import OnlineDel from './components/OnlineDel'
 import Best from './components/Best'
