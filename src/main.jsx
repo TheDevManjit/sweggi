@@ -7,7 +7,8 @@ import './index.css';
 import Layout from './Layout.jsx';
 import DelCard from './components/DelCard.jsx'
 import OnlineDel from './components/OnlineDel.jsx'
-import Cart from './components/cart.jsx'
+import Cart from './components/Cart.jsx'
+
 
 
 
