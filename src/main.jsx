@@ -21,6 +21,7 @@ const router = createBrowserRouter(
       <Route path='/items' element={<DelCard />} />
       <Route path='/restro' element={<OnlineDel />} />
       <Route path='/cart' element={<Cart />} />
+      <Route path='/items/cart' element={<Cart />} />
 
 
 

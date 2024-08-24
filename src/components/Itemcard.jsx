@@ -1,6 +1,7 @@
 import React from 'react'
 import { MdOutlineCurrencyRupee } from "react-icons/md";
 import { IoMdStarOutline } from "react-icons/io";
+import { NavLink } from 'react-router-dom';
 
 export default function Itemcard(props) {
     return (
@@ -18,7 +19,10 @@ export default function Itemcard(props) {
                             <img className=' group-hover:scale-110  duration-100 w-full h-full object-cover  ' src={`images/${props.image}`} alt="" />
                             {/* <img className=' group-hover:scale-110 duration-100 w-full h-full object-cover  ' src={`http://localhost:5000/images/` + props.image} alt="" /> */}
                             <div className='absolute w-full  h-full top-6 left-[20%] flex items-end p-2 text-[.7rem] lg:text-[20px] font-extrabold text-orange-500 tracking-tighter'>
+                                <NavLink to={'../cart'}>
                                 <span className='bg-white px-[15px] border-2  rounded-xl'>ADD</span>
+                                </NavLink>
+                                
                             </div>
 
                         </div>
