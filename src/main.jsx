@@ -5,7 +5,7 @@ import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} fr
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css';
-import Layout from './Layout.jsx';
+import Layout from './layout.jsx';
 import DelCard from './components/DelCard.jsx'
 
 import OnlineDel from './components/OnlineDel.jsx'
@@ -13,10 +13,10 @@ import OnlineDel from './components/OnlineDel.jsx'
 const router = createBrowserRouter(
   createRoutesFromElements(
 
-    <Route path="/sweggi" element={<Layout />} >
+    <Route path="/" element={<Layout />} >
       <Route path='' element={<App />} />
-      <Route path='sweggi/items' element={<DelCard />} />
-      <Route path='sweggi/restro' element={<OnlineDel />} />
+      <Route path='/items' element={<DelCard />} />
+      <Route path='/restro' element={<OnlineDel />} />
 
 
 
