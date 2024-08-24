@@ -73,7 +73,44 @@ export default function Restro() {
         };
     }, []);
 
+    useEffect(() => {
+        let touchStartX = 0;
+        let touchEndX = 0;
 
+        const handleTouchStart = (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        };
+
+        const handleTouchMove = (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+        };
+
+        const handleTouchEnd = () => {
+            if (touchStartX - touchEndX > 50) {
+                nextSlide();  // Swipe left
+            }
+
+            if (touchStartX - touchEndX < -50) {
+                preSlide();  // Swipe right
+            }
+        };
+
+        const slider = sliderRef.current;
+
+        if (slider) {
+            slider.addEventListener('touchstart', handleTouchStart);
+            slider.addEventListener('touchmove', handleTouchMove);
+            slider.addEventListener('touchend', handleTouchEnd);
+        }
+
+        return () => {
+            if (slider) {
+                slider.removeEventListener('touchstart', handleTouchStart);
+                slider.removeEventListener('touchmove', handleTouchMove);
+                slider.removeEventListener('touchend', handleTouchEnd);
+            }
+        };
+    }, [slide]);
     return (
         <div className='max-w-[1200px] mx-auto items-center mt-3 grow shrink-0' ref={componentRef}>
             <div className='font-bold text-[25px] flex items-center gap-2 lg:hidden'>
